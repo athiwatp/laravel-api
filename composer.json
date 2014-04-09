@@ -34,7 +34,6 @@
 	},
 	"minimum-stability": "dev",
 	"require-dev": {
-    	"phpunit/phpunit": "3.7.*",
-		"monolog":""
+    	"phpunit/phpunit": "3.7.*"
     }
 }
