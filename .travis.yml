@@ -2,4 +2,4 @@ language: php
 php:
   - "5.4"
 script:
-  composer self-update && composer install && phpunit
+  composer install && phpunit
