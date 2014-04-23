@@ -13,14 +13,27 @@
 
 Route::get('/', function()
 {
-	//return View::make('hello');
-	echo "xx";
+	$value = Session::get('key');
+	echo "Session : ".$value.".";
+
 	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
 	$localIP = exec ($command);
-	return $localIP."xx";
 
-	//return "Hello Beanstalk";
+	return "<br>[".$localIP."]";
 });
+
+Route::get('session/{data}', function($data)
+{
+	Session::put('key', $data);
+
+	echo $data;
+
+	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
+	$localIP = exec ($command);
+
+	return "<br>Session Set to "."[".$localIP."]";
+});
+
 
 Route::get('hello', function()
 {
