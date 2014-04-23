@@ -14,7 +14,12 @@
 Route::get('/', function()
 {
 	//return View::make('hello');
-	return "Hello Beanstalk";
+	echo "xx";
+	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
+	$localIP = exec ($command);
+	return $localIP."xx";
+
+	//return "Hello Beanstalk";
 });
 
 Route::get('hello', function()
