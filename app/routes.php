@@ -19,7 +19,7 @@ Route::get('/', function()
 	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
 	$localIP = exec ($command);
 
-	return "<br>[".$localIP."]";
+	return "<br>[".$localIP."]"."[".$_SERVER['SERVER_ADDR']."]";
 });
 
 Route::get('session/{data}', function($data)
@@ -31,7 +31,7 @@ Route::get('session/{data}', function($data)
 	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
 	$localIP = exec ($command);
 
-	return "<br>Session Set to "."[".$localIP."]";
+	return "<br>Session Set to "."[".$localIP."]"."[".$_SERVER['SERVER_ADDR']."]";
 });
 
 
