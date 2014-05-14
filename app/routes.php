@@ -22,6 +22,7 @@ Route::get('/', function()
 	return "<br>[".$localIP."]"."[".$_SERVER['SERVER_ADDR']."]";
 });
 
+
 Route::get('session/{data}', function($data)
 {
 	Session::put('key', $data);

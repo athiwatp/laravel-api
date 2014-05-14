@@ -1,3 +1,5 @@
+[ ![Codeship Status for flyingnati/laravel-api](https://www.codeship.io/projects/f56d1c90-bd9f-0131-5ad7-425498ddc89f/status?branch=master)](https://www.codeship.io/projects/21202)
+
 ## Laravel PHP Framework
 
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
