@@ -19,7 +19,7 @@ Route::get('/', function()
 	$command="/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}'";
 	$localIP = exec ($command);
 
-	return "<br>[".$localIP."]"."[".$_SERVER['SERVER_ADDR']."]";
+	return "<br>[".$localIP."]";
 });
 
 
