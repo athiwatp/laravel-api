@@ -12,7 +12,7 @@ class FizzBuzzTest extends TestCase {
 	{
 		$crawler = $this->client->request('GET', '/fizzbuzz/1');
 
-		$this->assertEquals("2", $this->client->getResponse()->getContent());
+		$this->assertEquals("1", $this->client->getResponse()->getContent());
 	}
 
 	public function testTwo()
